@@ -20,7 +20,7 @@ class AlertaMedicamentoDataBaseService {
           );
 
           if (
-            diaHoraMinistrado.segundos >= medicacao.quantidadeTempoHoras &&
+            diaHoraMinistrado.horas >= medicacao.quantidadeTempoHoras &&
             diaHoraMinistrado.dias < medicacao.quantidadeTempoDias
           ) {
             return this.dadosAlertaMedicacaoPaciente(medicacao);
