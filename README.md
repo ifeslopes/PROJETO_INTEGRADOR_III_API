@@ -1,3 +1,27 @@
+#  Disciplina: PROJETO INTEGRADOR COMPUTAÇÃO III 
+
+## Professor:  [Howard Roatti](https://www.linkedin.com/in/howardroatti/)🔗
+
+
+## 📋 Backend: Sistema de Alerta de Atividades Importantes
+
+O projeto a ser desenvolvido é um Sistema de Alerta de Atividades Importantes, destinado ao Asilo dos Idosos de Vitória. Este sistema é projetado para gerenciar e monitorar de maneira eficaz diversas atividades importantes dos residentes.
+
+### Funcionalidades do Backend
+
+Este repositório contém o backend do sistema, que é uma API REST responsável pelos seguintes cadastros e funcionalidades:
+
+- **Cadastro de Profissionais:** Registro e gerenciamento dos profissionais que atuam no asilo, incluindo médicos, enfermeiros e outros.
+- **Login de Profissionais:** Login e autenticação do profissional esta usando sistema.
+- **Cadastro de Medicamentos:** Gerenciamento de informações sobre medicamentos administrados aos residentes.
+- **Cadastro de Residentes:** Gerenciamento dos dados dos residentes do asilo, permitindo a atualização e consulta de suas informações.
+- **Alertas de Consultas:** Criação e gerenciamento de alertas para consultas médicas, garantindo que os residentes não percam compromissos importantes.
+- **Alertas de Medicamentos:** Emissão de alertas sobre os horários de administração de medicamentos, ajudando a assegurar que os residentes recebam seus medicamentos no horário correto.
+
+
+
+
+
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
@@ -14,6 +38,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - Visual Studio Code
 - Thunder Client
 - SQLite
+- Microsoft Sql Server
 - Node.js
 - TypeScript
 - Swagger
@@ -21,6 +46,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - Docker
 
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
+![Microsoft Sql Server](https://img.shields.io/badge/Microsoft_SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
@@ -28,6 +54,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+   
 --- 
 
 
