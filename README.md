@@ -137,7 +137,7 @@ Para rodar o projeto, siga estas etapas:
 2. Navegue até o diretório do projeto:
 
     ```bash
-    cd PI-III-5DC1-2024-1/backend
+    cd PROJETO_INTEGRADOR_III_API
     ```
 
  # 🐳 Rodando Com Docker:
@@ -155,35 +155,37 @@ docker compose up
  ```
 Se você não tiver o Docker instalado, siga para o passo 3 .
   
-3. Execute o comando npm install para instalar todas as dependências do projeto:
+![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) 
 
- ```bash
-    npm install package.json
- ```
-3. Execute o comando npm install para instalar todas as dependências do projeto:
+3. Troque de branch para api_dev_sqlite:
 
- ```bash
-    npm install package.json
- ```
+   ```bash
+      git checkout api_dev_sqlite  
+   ```
+4. Execute o comando npm install para instalar todas as dependências do projeto:
 
-4. Execute os comandos para gerar o banco de dados do Prisma com SQLite:
+   ```bash
+      npm install package.json
+   ```
 
- ```bash
-    npx prisma generate
-    npx prisma migrate      
-    npx prisma migrate --schema=./prisma/schema.prisma               
-```
-5. Execute um dos comandos abaixo,  npm run, dentro  da pasta backend, para api_dev para iniciar o servidor de desenvolvimento da API:
+5. Execute os comandos para gerar o banco de dados do Prisma com SQLite:
 
- ```bash
-       npx ts-node-dev index.ts    
-```
- ```bash
-       npm run dev    
-```
- ```bash
-       npm run swagger    
-```
+   ```bash
+      npx prisma generate
+      npx prisma migrate      
+      npx prisma migrate --schema=./prisma/schema.prisma               
+   ```
+6. Execute um dos comandos abaixo,  npm run, dentro  da pasta backend, para api_dev para iniciar o servidor de desenvolvimento da API:
+
+   ```bash
+         npx ts-node-dev index.ts    
+   ```
+   ```bash
+         npm run dev    
+   ```
+   ```bash
+         npm run swagger    
+   ```
 
 
 Será iniciado um servidor local do frontend na seguinte URL:
