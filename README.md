@@ -160,6 +160,11 @@ Se você não tiver o Docker instalado, siga para o passo 3 .
  ```bash
     npm install package.json
  ```
+3. Execute o comando npm install para instalar todas as dependências do projeto:
+
+ ```bash
+    npm install package.json
+ ```
 
 4. Execute os comandos para gerar o banco de dados do Prisma com SQLite:
 

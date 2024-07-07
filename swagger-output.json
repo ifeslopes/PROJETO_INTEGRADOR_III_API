@@ -12,7 +12,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3005"
+      "url": "http://0.0.0.0:3005"
     }
   ],
   "paths": {
@@ -36,9 +36,6 @@
                 }
               }
             }
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         },
         "security": [
@@ -121,9 +118,6 @@
                 }
               }
             }
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         },
         "security": [
@@ -161,9 +155,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         },
         "security": [
@@ -860,9 +851,6 @@
                 }
               }
             }
-          },
-          "400": {
-            "description": "Bad Request"
           }
         },
         "security": [
@@ -900,9 +888,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
           }
         },
         "security": [
@@ -979,9 +964,6 @@
                 }
               }
             }
-          },
-          "400": {
-            "description": "Bad Request"
           }
         },
         "security": [

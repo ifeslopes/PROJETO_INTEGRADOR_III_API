@@ -15,7 +15,7 @@ const doc = {
   },
   servers: [
     {
-      url: "http://localhost:3005",
+      url: "http://0.0.0.0:3005",
     },
   ],
   components: {
@@ -99,7 +99,7 @@ const doc = {
         dataConsulta: "2024-05-18T12:34:56Z",
         tipoConsulta: "Rotina",
         nomeMedico: "Dr. José",
-        compareceu: "Sim",
+        compareceu: "Não",
         observacao: "Paciente em boa condição",
         residenteId: 1,
         profissionalId: 1,

@@ -8,7 +8,7 @@ class AlertaMedicamentoDataBaseService {
   constructor() {}
 
   async listDBAlertaConsultaPaciente() {
-    const DIA_CONSULTA = 25;
+    const DIA_CONSULTA = 0;
     const COMPARECEU_CONSULTA = "SIM";
     try {
       const consultas =
@@ -23,7 +23,7 @@ class AlertaMedicamentoDataBaseService {
 
 
           if (
-            tempoProxiConsulta.segundos <= DIA_CONSULTA &&
+            tempoProxiConsulta.dias <= DIA_CONSULTA &&
             consulta.compareceu.toUpperCase() !== COMPARECEU_CONSULTA
           ) {
             return this.dadosAlertaCosultaPaciente(consulta);
