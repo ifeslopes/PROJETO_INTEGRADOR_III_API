@@ -14,8 +14,7 @@ services:
       NODE_ENV: development
       DEBUG: nodejs-docker
       NODE_OPTIONS: "--max-old-space-size=1200"
-      DATABASE_URL: "sqlserver://sqlserver:1433;database=residenteDB;integratedSecurity=true;username=sa;password=Xr09LDtRhyW3LkiI;trustServerCertificate=true;encrypt=true;IntegratedSecurity=false;"
-    depends_on:
+      DATABASE_URL: ${localEnv:URL_USER_PASSWD}
       sqlserver:
         condition: service_healthy
 
