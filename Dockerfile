@@ -11,7 +11,6 @@ EXPOSE 3005
 FROM base as dev
 ENV NODE_ENV=development
 
-RUN npm install -g increase-memory-limit increase-memory-limit
 RUN npm install package.json
 
 RUN npx prisma generate --schema=./prisma/schema.prisma

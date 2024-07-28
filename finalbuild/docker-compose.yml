@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   web:
-    image: lopes231/backend-web:v1
+    image: lopes231/backend-web:latest
     volumes:
       - ./:/app
     command: npm run prisma
@@ -17,7 +17,7 @@ services:
         condition: service_healthy
 
   sqlserver:
-    image: mcr.microsoft.com/mssql/server:2022-latest
+    image: mcr.microsoft.com/mssql/server:2022-CU13-ubuntu-22.04
     container_name: sql_server_express
     restart: always
     environment:
@@ -39,6 +39,7 @@ services:
       interval: 15s
       timeout: 10s
       retries: 10
+      start_period: 1s
 
   frontend:
     image: lopes231/frontend:beta
@@ -50,6 +51,15 @@ services:
       NODE_ENV: development
     depends_on:
       - web
+
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: '--interval 15'
+    environment:
+      WATCHTOWER_NOTIFICATION_URL: 'telegram://7059529969:AAH5trTCipy_t6GVYgF9FWR0ZX-AZ6A3wi4@telegram?chats=7059529969'
+      WATCHTOWER_NOTIFICATION_TEMPLATE: '{{range .}}{{.Time.Format "2006-01-02 15:04:05"}} ({{.Level}}): {{.Message}}{{println}}{{end}}'
 
 volumes:
   sqlserver_database:
