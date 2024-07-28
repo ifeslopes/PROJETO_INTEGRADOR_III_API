@@ -58,7 +58,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     command: '--interval 15'
     environment:
-      WATCHTOWER_NOTIFICATION_URL: 'telegram://7059529969:AAH5trTCipy_t6GVYgF9FWR0ZX-AZ6A3wi4@telegram?chats=7059529969'
+      WATCHTOWER_NOTIFICATION_URL: ''
       WATCHTOWER_NOTIFICATION_TEMPLATE: '{{range .}}{{.Time.Format "2006-01-02 15:04:05"}} ({{.Level}}): {{.Message}}{{println}}{{end}}'
 
 volumes:
