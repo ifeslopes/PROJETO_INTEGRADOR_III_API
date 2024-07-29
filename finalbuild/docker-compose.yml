@@ -58,7 +58,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     command: "-i 7"
     environment:
-      WATCHTOWER_NOTIFICATION_URL: '${TOKEN_TELEGRAM}'
+      WATCHTOWER_NOTIFICATION_URL: ""
       WATCHTOWER_NOTIFICATION_TEMPLATE: '{{range .}}{{.Time.Format "2006-01-02 15:04:05"}} ({{.Level}}): {{.Message}}{{println}}{{end}}'
    
 volumes:
