@@ -25,4 +25,4 @@ jobs:
           push: true
           tags: |
             ${{ secrets.USER }}/backend-web:latest
-            ${{ secrets.USER }}/backend-web:${{ github.run_number }}
+            ${{ secrets.USER }}/backend-web:${{ format('1.0.{0}', github.run_number) }}
