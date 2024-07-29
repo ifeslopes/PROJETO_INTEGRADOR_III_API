@@ -1,13 +1,11 @@
 const swaggerAutogen = require("swagger-autogen")({ openapi: "3.0.0" });
 
 const doc = {
-
-  info: {
-    version: "1.0.5",
-    title: "Cuidado ao Residente  API",
-    description:
-      "Cuidado ao Residente é uma API para cadastro e gerenciamento de dados dos residentes e suas consultas médicas. <br> Ela permite registrar informações detalhadas, como histórico médico, alergias e medicamentos, oferecendo um acompanhamento personalizado e eficaz.<br>A API também possibilita o cadastro de consultas, registrando data, horário, tipo e observações, garantindo um histórico completo de atendimento.<br> Além disso, inclui alertas de horário de medicação e dia de consulta, ajudando a manter a adesão ao tratamento e a pontualidade nas consultas. ",
-
+    info: {
+        version: '1.0.1',
+        title: 'Cuidado ao Residente  API',
+        description:
+            'Cuidado ao Residente é uma API para cadastro e gerenciamento de dados dos residentes e suas consultas médicas. <br> Ela permite registrar informações detalhadas, como histórico médico, alergias e medicamentos, oferecendo um acompanhamento personalizado e eficaz.<br>A API também possibilita o cadastro de consultas, registrando data, horário, tipo e observações, garantindo um histórico completo de atendimento.<br> Além disso, inclui alertas de horário de medicação e dia de consulta, ajudando a manter a adesão ao tratamento e a pontualidade nas consultas. ',
 
         contact: {
             name: 'API Support',
@@ -15,11 +13,11 @@ const doc = {
             email: 'https://github.com/howardroatti',
         },
     },
-     servers: [
-    {
-      url: "http://localhost:3005",
-    },
-  ],
+    servers: [
+        {
+            url: 'http://ip172-18-0-16-cqjfh88l2o9000ce8b4g-3005.direct.labs.play-with-docker.com',
+        },
+    ],
     components: {
         securitySchemes: {
             bearerAuth: {
