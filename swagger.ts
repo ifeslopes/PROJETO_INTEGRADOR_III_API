@@ -7,7 +7,7 @@ const doc = {
     title: "Cuidado ao Residente  API",
     description:
       "Cuidado ao Residente é uma API para cadastro e gerenciamento de dados dos residentes e suas consultas médicas. <br> Ela permite registrar informações detalhadas, como histórico médico, alergias e medicamentos, oferecendo um acompanhamento personalizado e eficaz.<br>A API também possibilita o cadastro de consultas, registrando data, horário, tipo e observações, garantindo um histórico completo de atendimento.<br> Além disso, inclui alertas de horário de medicação e dia de consulta, ajudando a manter a adesão ao tratamento e a pontualidade nas consultas. ",
-main
+
 
         contact: {
             name: 'API Support',
@@ -15,11 +15,11 @@ main
             email: 'https://github.com/howardroatti',
         },
     },
-    servers: [
-        {
-            url: 'http://ip172-18-0-79-cqjcjb291nsg008m01t0-3005.direct.labs.play-with-docker.com',
-        },
-    ],
+     servers: [
+    {
+      url: "http://localhost:3005",
+    },
+  ],
     components: {
         securitySchemes: {
             bearerAuth: {
