@@ -1,4 +1,4 @@
-version: "3.9"
+version: '3.9'
 
 services:
   web:
@@ -7,38 +7,48 @@ services:
       target: dev
     volumes:
       - ./:/app
-    command: npm run prisma
+    command: ["npm", "run", "prisma"]
     ports:
-      - "3005:3005"
+      - '3005:3005'
     environment:
       NODE_ENV: development
       DEBUG: nodejs-docker
-      NODE_OPTIONS: "--max-old-space-size=1200"
-      DATABASE_URL: ${localEnv:URL_USER_PASSWD}
+      NODE_OPTIONS: '--max-old-space-size=1200'
+      DATABASE_URL: 'sqlserver://sqlserver:1433;database=residenteDB;integratedSecurity=true;username=sa;password=Xr09LDtRhyW3LkiI;trustServerCertificate=true;encrypt=true;IntegratedSecurity=false;'
+    depends_on:
       sqlserver:
-        condition: service_healthy
+          condition: service_healthy
 
   sqlserver:
-    image: mcr.microsoft.com/mssql/server:2022-latest
+    image: mcr.microsoft.com/mssql/server:2022-CU13-ubuntu-22.04
     container_name: sql_server_express
     restart: always
-    env_file:
-      - .env
+    environment:
+      SA_PASSWORD: 'Xr09LDtRhyW3LkiI'
+      ACCEPT_EULA: 'Y'
+      MSSQL_PID: 'Express'
+      MSSQL_DB: 'residentb'
     ports:
-      - "1433:1433"
+      - '1433:1433'
     volumes:
       - sqlserver_database:/var/opt/mssql
-
     healthcheck:
-      test:
-        [
-          "CMD-SHELL",
-          "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'Xr09LDtRhyW3LkiI' -Q 'SELECT 1'",
-        ]
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'Xr09LDtRhyW3LkiI' -Q 'SELECT 1'"]
       interval: 15s
       timeout: 10s
       retries: 10
+      start_period: 1s
+
+  frontend:
+    image: lopes231/frontend:beta
+    volumes:
+      - ./:/app_web
+    ports:
+      - '3000:3000'
+    environment:
+      NODE_ENV: development
+    depends_on:
+      - web
 
 volumes:
-  sqlserver_database:
- 
+    sqlserver_database:
