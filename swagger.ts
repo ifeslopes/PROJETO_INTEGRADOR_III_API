@@ -15,7 +15,7 @@ const doc = {
     },
     servers: [
         {
-            url: 'http://ip172-18-0-16-cqjfh88l2o9000ce8b4g-3005.direct.labs.play-with-docker.com',
+            url: 'http://0.0.0.0:3005',
         },
     ],
     components: {
