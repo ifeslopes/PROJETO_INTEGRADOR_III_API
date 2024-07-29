@@ -51,4 +51,4 @@ services:
       - web
 
 volumes:
-  sqlserver_database:
+    sqlserver_database:
