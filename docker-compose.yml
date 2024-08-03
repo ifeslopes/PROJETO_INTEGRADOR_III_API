@@ -39,16 +39,6 @@ services:
       retries: 10
       start_period: 1s
 
-  frontend:
-    image: lopes231/frontend:beta
-    volumes:
-      - ./:/app_web
-    ports:
-      - '3000:3000'
-    environment:
-      NODE_ENV: development
-    depends_on:
-      - web
-
+ 
 volumes:
     sqlserver_database:
