@@ -44,6 +44,8 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - Swagger
 - JWT
 - Docker
+- GitHub Actions CI
+- Watchtower CD
 
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Microsoft Sql Server](https://img.shields.io/badge/Microsoft_SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
@@ -54,7 +56,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-   
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 --- 
 
 
@@ -124,6 +126,11 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
         └── tsconfig.json
 ```
 
+
+## Readme Final Build 🔧
+
+- [Readme Projeto Completo com: Docker copose up](finalbuild/README.md)
+
 ## 🚀 Rodando o Projeto
 
 Para rodar o projeto, siga estas etapas:
@@ -147,12 +154,7 @@ Se você tiver o Docker e o Docker Compose instalados, execute os seguintes coma
 ```bash
 docker-compose up --build -d
  ```
-Este comando irá construir as imagens do Docker e iniciar os contêineres em modo detached (em segundo plano).
-para subir o contêineres:
 
-```bash
-docker compose up 
- ```
 Se você não tiver o Docker instalado, siga para o passo 3 .
   
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) 
