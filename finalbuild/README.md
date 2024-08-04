@@ -5,6 +5,7 @@
 1. **Instalar Docker**
     - **Para Windows e macOS**: Baixe e instale o Docker Desktop a partir do [site oficial do Docker](https://www.docker.com/products/docker-desktop).
     - **Para Linux**: Siga as instruções de instalação específicas para a sua distribuição, disponíveis no [site oficial do Docker](https://docs.docker.com/engine/install/).
+    - **Play With Docke**: O Play With Docker oferece a você a experiência de ter uma máquina virtual Alpine Linux gratuita na nuvem [site oficial do Play with docke](https://labs.play-with-docker.com/).
 2. **Verificar Instalação**
     - Abra o terminal (ou prompt de comando) e execute:
         
@@ -75,16 +76,6 @@
             timeout: 10s
             retries: 10
 
-        frontend:
-            image: lopes231/frontend:beta
-            volumes:
-            - ./:/app_web
-            ports:
-            - "3000:3000"
-            environment:
-            NODE_ENV: development
-            depends_on:
-            - web
 
         volumes:
         sqlserver_database:
