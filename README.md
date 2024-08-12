@@ -138,7 +138,7 @@ Para rodar o projeto, siga estas etapas:
 1. Clone o repositório para o seu computador usando o seguinte comando:
 
     ```bash
-    git clone https://github.com/howardroatti/PI-III-5DC1-2024-1.git
+    git clone https://github.com/ifeslopes/PROJETO_INTEGRADOR_III_API.git
     ```
 
 2. Navegue até o diretório do projeto:
