@@ -5,6 +5,7 @@
 
 ## 📋 Backend: Sistema de Alerta de Atividades Importantes
 
+
 O projeto a ser desenvolvido é um Sistema de Alerta de Atividades Importantes, destinado ao Asilo dos Idosos de Vitória. Este sistema é projetado para gerenciar e monitorar de maneira eficaz diversas atividades importantes dos residentes.
 
 ### Funcionalidades do Backend
@@ -31,8 +32,10 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - **Para Windows e macOS**: Baixe e instale o Docker Desktop a partir do [site oficial do Docker](https://www.docker.com/products/docker-desktop).
 - **Para Linux**: Siga as instruções de instalação específicas para a sua distribuição, disponíveis no [site oficial do Docker](https://docs.docker.com/engine/install/).
 
+
+
 --- 
-## Tecnologias Utilizadas 🔧
+## Tecnologias Utilizadas 🔧  ![Status do Workflow](https://github.com/ifeslopes/PROJETO_INTEGRADOR_III_API/actions/workflows/main.yml/badge.svg)
 
 - Prisma ORM
 - Visual Studio Code
