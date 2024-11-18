@@ -71,5 +71,5 @@ model MedicacaoPaciente {
 
 datasource db {
   provider = "sqlserver"
-  url      = "sqlserver://sqlserver:1433;database=residenteDB;integratedSecurity=true;username=sa;password=Xr09LDtRhyW3LkiI;trustServerCertificate=true;encrypt=true;IntegratedSecurity=false;"
+  url      = env("DATABASE_URL")
 }

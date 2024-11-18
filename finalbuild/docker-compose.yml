@@ -11,7 +11,7 @@ services:
       NODE_ENV: development
       DEBUG: nodejs-docker
       NODE_OPTIONS: "--max-old-space-size=1200"
-      DATABASE_URL: "sqlserver://sqlserver:1433;database=residenteDB;integratedSecurity=true;username=sa;password=Xr09LDtRhyW3LkiI;trustServerCertificate=true;encrypt=true;IntegratedSecurity=false;"
+      DATABASE_URL: "sqlserver://172.18.0.95:1433;database=residenteDB;integratedSecurity=true;username=sa;password=Xr09LDtRhyW3LkiI;trustServerCertificate=true;encrypt=true;IntegratedSecurity=false;"
     depends_on:
       sqlserver:
         condition: service_healthy
@@ -47,7 +47,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     command: "-i 7"
     environment:
-      WATCHTOWER_NOTIFICATION_URL: ""
+      WATCHTOWER_NOTIFICATIONS: 'shoutrrr'
+      WATCHTOWER_NOTIFICATION_URL: ''
       WATCHTOWER_NOTIFICATION_TEMPLATE: '{{range .}}{{.Time.Format "2006-01-02 15:04:05"}} ({{.Level}}): {{.Message}}{{println}}{{end}}'
    
 volumes:
